@@ -23,7 +23,23 @@ var loop = function () {
 	process.stdout.write(output);
 };
 
+var init = function () {
+	var output = term.cursor.hide();
+	process.stdout.write(output);
+};
+
+var finish = function () {
+	var output = term.clear.all() + term.cursor.home();
+	process.stdout.write(output);
+};
+
+init();
 (function inner () {
 	loop();
 	setImmediate(inner);
 })();
+
+process.on('SIGINT', function () {
+	finish();
+	process.exit();
+});

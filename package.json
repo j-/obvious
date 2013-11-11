@@ -1,0 +1,19 @@
+{
+	"name": "obvious",
+	"description": "make your terminal obvious",
+	"author": "Jamie Hoeks <j@skeoh.com>",
+	"version": "0.0.0",
+	"preferGlobal": true,
+	"main": "./index.js",
+	"bin": {
+		"obvious": "./bin/obvious"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/j-/obvious.git"
+	},
+	"dependencies": {
+		"term": "https://github.com/j-/term/tarball/master"
+	},
+	"license": "MIT"
+}

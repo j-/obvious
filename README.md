@@ -18,7 +18,7 @@ You can use `obvious` to notify you when `obvious` has been successfully install
 With [npm](http://npmjs.org/):
 
 ```sh
-$ npm install -g https://github.com/j-/obvious/tarball/master && obvious
+$ npm install -g obvious && obvious
 ```
 
 ## License

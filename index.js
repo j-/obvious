@@ -6,11 +6,11 @@ var repeatString = function (string, count) {
 
 var drawScreen = function (w, h, bg) {
 	var output =
-		term.cursor.home() +
 		term.color.bg(
 			repeatString(' ', w * (h - 1)),
 			bg
-		);
+		) +
+		term.cursor.home();
 	return output;
 };
 

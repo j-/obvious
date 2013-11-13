@@ -13,7 +13,7 @@ $ sleep 5; obvious
 
 ## Installing
 
-You can use `obvious` to notify you when `obvious`been has successfully installed.
+You can use `obvious` to notify you when `obvious` has been successfully installed.
 
 With [npm](http://npmjs.org/):
 

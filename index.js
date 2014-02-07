@@ -1,3 +1,7 @@
+process.title = 'ATTENTION';
+
+const PERIOD = 500;
+
 var term = require('term');
 
 var repeatString = function (string, count) {
@@ -14,13 +18,17 @@ var drawScreen = function (w, h, bg) {
 	return output;
 };
 
+var currentState = false;
 var loop = function () {
 	var w = process.stdout.columns;
 	var h = process.stdout.rows;
-	var alt = Date.now() % 500 < 250;
-	var bg = alt ? term.color.WHITE : term.color.BLACK;
-	var output = drawScreen(w, h, bg);
-	process.stdout.write(output);
+	var alt = Date.now() % PERIOD < (PERIOD / 2);
+	if (alt !== currentState) {
+		var bg = alt ? term.color.WHITE : term.color.BLACK;
+		var output = drawScreen(w, h, bg);
+		currentState = alt;
+		process.stdout.write(output);
+	}
 };
 
 var init = function () {

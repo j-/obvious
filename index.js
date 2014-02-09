@@ -82,7 +82,7 @@ var finish = function () {
 	init();
 	(function inner () {
 		loop();
-		setImmediate(inner);
+		setTimeout(inner, 10);
 	})();
 
 	process.on('SIGINT', function () {

@@ -20,10 +20,10 @@ var drawScreen = function (w, h, bg) {
 
 var currentState = false;
 var loop = function () {
-	var w = process.stdout.columns;
-	var h = process.stdout.rows;
 	var alt = Date.now() % PERIOD < (PERIOD / 2);
 	if (alt !== currentState) {
+		var w = process.stdout.columns;
+		var h = process.stdout.rows;
 		var bg = alt ? term.color.WHITE : term.color.BLACK;
 		var output = drawScreen(w, h, bg);
 		currentState = alt;

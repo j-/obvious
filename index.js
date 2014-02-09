@@ -1,4 +1,4 @@
-process.title = 'ATTENTION';
+process.title = 'obvious';
 
 const PERIOD = 500;
 

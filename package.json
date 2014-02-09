@@ -2,7 +2,7 @@
 	"name": "obvious",
 	"description": "make your terminal obvious",
 	"author": "Jamie Hoeks <j@skeoh.com>",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"preferGlobal": true,
 	"main": "./index.js",
 	"bin": {

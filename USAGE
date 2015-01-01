@@ -1,0 +1,8 @@
+Make your terminal obvious
+
+Usage:
+    obvious [options]
+
+Options:
+    -h, --help      Show this screen
+    -V, --version   Show version

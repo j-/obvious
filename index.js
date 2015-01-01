@@ -1,3 +1,11 @@
+var docopt = require('docopt').docopt;
+var fs = require('fs');
+var USAGE = fs.readFileSync('./USAGE', 'utf-8');
+var options = docopt(USAGE, {
+	help: true,
+	version: require('./package.json').version
+});
+
 var term = require('term');
 
 process.title = 'obvious';

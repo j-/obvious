@@ -11,6 +11,10 @@ Just run `obvious` after a process and your screen will flash indefinitely after
 $ sleep 5; obvious
 ```
 
+## Usage
+
+See [USAGE](USAGE) for options.
+
 ## Installing
 
 You can use `obvious` to notify you when `obvious` has been successfully installed.

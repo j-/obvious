@@ -4,5 +4,7 @@ Usage:
     obvious [options]
 
 Options:
-    -h, --help      Show this screen
-    -V, --version   Show version
+    --screen=<name>  Specify screen to use [default: blink]
+    --interval=<ms>  Screen update interval in ms [default: 100]
+    -h, --help       Show this screen
+    -V, --version    Show version

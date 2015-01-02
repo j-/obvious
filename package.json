@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "docopt": "^0.4.1",
+    "okaylib": "^0.4.0",
     "term": "git://github.com/j-/term"
   },
   "license": "MIT"

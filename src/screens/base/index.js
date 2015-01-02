@@ -1,14 +1,10 @@
-var util = require('./util');
+var ok = require('okaylib');
 
 /**
  * Base screen class for other screens to inherit from. Has no functionality.
  * @constructor
  */
-var Base = function () {
-	this.init.apply(this, arguments);
-};
-
-Base.prototype = {
+var Base = ok.Base.extend({
 	/**
 	 * Initialize state. Called when instance is constructed.
 	 * @param {Object} options Options hash
@@ -23,7 +19,7 @@ Base.prototype = {
 
 	},
 	/**
-	 * Terdown method, called when screen is stopped.
+	 * Teardown method, called when screen is stopped.
 	 */
 	stop: function () {
 
@@ -35,19 +31,6 @@ Base.prototype = {
 	update: function () {
 
 	}
-};
-
-/**
- * Create a child constructor of this class with an extended prototype.
- * @example
- *     var Foo = Base.extend({ bar: 'baz' });
- *     var foo = new Foo();
- *     console.log(foo.bar); // => "baz"
- * @param {Object=} proto Prototype methods
- * @return {Function} New constructor
- */
-Base.extend = function (proto) {
-	return util.extendClass(this, proto);
-};
+});
 
 module.exports = Base;
